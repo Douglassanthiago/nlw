@@ -9,6 +9,7 @@
 
 header img {
     width: 120px;
+    height: 120px;
     border-radius: 50%;
     /* ajustando o tamanho da imagem e arredondando a imagem */
 
@@ -34,7 +35,10 @@ header div {
     transition: transform(.3s);
     /* A cada 3 segundo a scala volta ao normal*/
 }
-
+header div img {
+    width: 100%;
+    border-radius: 50%;
+}
 header div:hover {
     /* quando passar o mause vai aplicar a propriedade dentro da div 'transform' */
 
@@ -44,7 +48,7 @@ header div:hover {
 }
 
 ul {
-    list-style: nome;
+    list-style: none;
     /*limpa os estilos das listas */
 
 }
@@ -141,7 +145,7 @@ section ul li:hover {
 
 .Listadejogos img {
     width: 90px;
-    border-radius: 9px;
+    border-radius: 8px;
 }
 
 .Listadecanais img {
