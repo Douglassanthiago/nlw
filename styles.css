@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* reseta o css limpa os espaços vasios do navegor interezante sempre usar*/
+
+
+}
+
+header img {
+    width: 120px;
+    border-radius: 50%;
+    /* ajustando o tamanho da imagem e arredondando a imagem */
+
+}
+
+header {
+    padding-top: 32px;
+    height: calc(120px + 32px);
+    /* centralizando a imagem titulo */
+
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+    /* borda colorida da imagem titulo perfil */
+    border-radius: 50%;
+    /* arredondamento de borda */
+    display: flex;
+    padding: 4px;
+    /* deixa a borda colorida de 4px */
+    transition: transform(.3s);
+    /* A cada 3 segundo a scala volta ao normal*/
+}
+
+header div:hover {
+    /* quando passar o mause vai aplicar a propriedade dentro da div 'transform' */
+
+    transform: scale(1.1);
+    /*almenta a escala da imagem */
+
+}
+
+ul {
+    list-style: nome;
+    /*limpa os estilos das listas */
+
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    /* centraliza a imagem no centro da pagina */
+    background-size: 100% auto;
+    /*tamanho da pagina primeiro 100% a pagina vai crecer quando a imagem cresce  */
+    background-repeat: no-repeat;
+    /* para não repetir imagem  */
+    background-color: #121214;
+    /* Cor para continuar a imagem de fundo*/
+}
+
+body * {
+    font-family: 'inter', sans-serif;
+    line-height: 160%;
+
+}
+
+
+
+main {
+    max-width: 580px;
+    /* tudo que estiver dentro do Main vai manter a largura maxima de 580px*/
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    gap: 24px;
+    margin-top: 32px;
+    /* espaçamento borda em cima do maim */
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+    /* arredondamento de borda */
+}
+
+.fotoperfil {
+    background-position: top center;
+
+}
+
+section div {
+    background-color: #2a2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+
+}
+
+section h2 {
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.47px;
+}
+
+section p {
+    font-size: 16px;
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+
+    display: flex;
+    /* Deixa todas as caixas em lista lado a lado */
+    gap: 16px;
+    flex-wrap: wrap;
+    /* ajuste os jogos na caixa*/
+
+    margin-top: 20px;
+
+}
+
+section ul li {
+    transition: (3s);
+    /* A cada 3 segundo a scala volta ao normal*/
+
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+    /* almenta a escala da imagem ao passar o mause*/
+
+
+}
+
+.Listadejogos img {
+    width: 90px;
+    border-radius: 9px;
+}
+
+.Listadecanais img {
+
+    border-radius: 50%;
+    /* arredondamento de borda */
+    width: 70px;
+    border: 2px solid #443e54;
+    /* borda cinza dos canais*/
+}
+
+header div {
+    animation: fromTop .7s .4s backwards;
+    /* chama a atualização na div*/
+
+}
+main section {
+    animation: fromBottom .7s backwards;
+}
+main section:nth-child(1){
+
+    animation-delay: 0;
+}
+main section:nth-child(2){
+
+    animation-delay: .4s;
+}
+main section:nth-child(3){
+
+    animation-delay: .8s;
+}
+
+@keyframes fromTop {
+
+    /* A nimação de movimento do perfil tirulo*/
+    from {
+        opacity: 0;
+
+        transform: translateY(-30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {    /* A nimação de movimento do de todas as colunas jogos canais e rede social
+    */
+
+
+
+    from {
+        opacity: 0;
+
+        transform: translateY(-30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+
+    }
+}
